@@ -2,20 +2,29 @@
 <html>
 <head>
 <title>Page Title</title>
+<script>
+function validateForm() {
+  var x = document.forms["myForm"]["fname"].value;
+  var y = document.forms["myForm"]["lname"].value;
+  var z = document.forms["myForm"]["email"].value;
+  if (x == "") {
+    alert("First Name must be filled out");}
+  if (y == "") {
+    alert("Last Name must be filled out");}
+  if (z == "") {
+    alert("Email must be filled out");}
+  return false;}
+</script>
 </head>
+<h1 style="font-size:300%;">Customer Information</h1>
 <link rel="stylesheet" href="styles.css">
 <body>
-
 <form name="myForm" action="/action_page.php" onsubmit="return validateForm()" method="post">
-Name: <input type="text" name="fname">
-<input type="submit" value="Submit">
+ First Name: <input type="text" name="fname">
+ <p>Last Name: <input type="text" name="lname">
+ <p>Email: <input type="text" name="email">
+  <input type="submit" value="Submit">
 </form>
-<h1 style="font-size:300%;">Customer Information</h1>
-<p>First name:<p>
-<p>Last name:<p>
-<p>Email:</p>
-<button>Submit</button>
 <tagname style="property:value;">
-
 </body>
 </html>
